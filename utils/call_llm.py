@@ -5,7 +5,7 @@ import requests
 def call_llm(prompt, model=None, host="http://192.168.0.250:11434"):
     # Ensure model is not None or empty
     if not model:
-        model = "gemma3:27b-it-qat"
+        model = "devstral:24b"
     else:
         print("*********************")
         print(f"Using model: {model}")

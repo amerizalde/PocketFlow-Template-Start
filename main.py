@@ -1,17 +1,11 @@
-from flow import create_qa_flow
+from youtube_flow import create_youtube_summary_flow
 
-# Example main function
-# Please replace this with your own main function
 def main():
-    shared = {
-        "question": "In one sentence, what's the end of universe?",
-        "answer": None
-    }
-
-    qa_flow = create_qa_flow()
-    qa_flow.run(shared)
-    print("Question:", shared["question"])
-    print("Answer:", shared["answer"])
+    '''Run the YouTube video summarization flow.'''
+    shared = {}
+    flow = create_youtube_summary_flow()
+    flow.run(shared)
+    print(f"HTML summary generated: {shared.get('html_file')}")
 
 if __name__ == "__main__":
     main()
